@@ -16,7 +16,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test1()
+        public void ParserSimpleStringTest()
         {
             // Arrange
             var dataSourceMock = new Mock<IDataSource>();
@@ -29,7 +29,6 @@ namespace Tests
 
             // Assert
             Assert.AreEqual(5, result.Count());
-            //Assert.AreEqual("$a", (result).Name);
         }
     }
 }

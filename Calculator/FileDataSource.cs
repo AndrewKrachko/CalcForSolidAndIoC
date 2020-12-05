@@ -3,6 +3,10 @@ using System.IO;
 
 namespace Calculator
 {
+    /// <summary>
+    /// Фактическое использование принципа Single responsibility
+    /// через реализацию получения данных только из файлов.
+    /// </summary>
     public class FileDataSource : DataSource
     {
         private readonly string _fileName;

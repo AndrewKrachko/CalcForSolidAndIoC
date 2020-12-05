@@ -3,6 +3,11 @@ using Calculator.Interfaces;
 
 namespace Calculator
 {
+    /// <summary>
+    /// Реализует принцип Open/Close через абстрагирование Parser от типов объектов и позволяя
+    /// относительно свободно изменять набор параметров в EquationItemFactory, оставляя Parser
+    /// в исходном состоянии.
+    /// </summary>
     public class EquationItemFactory
     {
         public char[] Operations = {'+', '-', '=', '$'};

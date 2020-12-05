@@ -3,7 +3,12 @@ using Calculator.Interfaces;
 
 namespace Calculator
 {
-    public class Variable : IVariable
+
+    /// <summary>
+    /// Реализация принципа Liskov Substitution через обеспечение обратной совместимости
+    /// с классом Number, достигающееся через расширение класса-родителя
+    /// </summary>
+    public class Variable : Number
     {
         private double _value;
         private string _name;
@@ -13,15 +18,8 @@ namespace Calculator
         public string Name { get; }
         public double Value => _value;
 
-        public Variable(int position)
+        public Variable(int position) : base(position)
         {
-            Position = position;
-            _value = Double.NaN;
-        }
-
-        public void SetValue(double value)
-        {
-            _value = value;
         }
 
         public void SetName(string name)

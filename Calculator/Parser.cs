@@ -5,6 +5,10 @@ using Calculator.Interfaces;
 
 namespace Calculator
 {
+    /// <summary>
+    /// А здесь реализована инверсия зависимостей через передачу в метод Parse
+    /// объекта с интерфейсом IDataSource.
+    /// </summary>
     public class Parser : IParser
     {
         private Status _parserStatus;
